@@ -285,8 +285,8 @@ function($parse, $http, $templateCache, $compile) {
   };
   function isTabHeading(node) {
     return node.tagName &&  (
-      node.hasAttribute('tab-heading') ||
-      node.hasAttribute('data-tab-heading') ||
+      node.getAttribute('tab-heading') !== null ||
+      node.getAttribute('data-tab-heading') !== null ||
       node.tagName.toLowerCase() === 'tab-heading' ||
       node.tagName.toLowerCase() === 'data-tab-heading'
     );
